@@ -9,7 +9,7 @@ PORT = "/dev/ttyACM0"
 BAUDRATE = 115200
 
 SEND_TEXT_CMD = 0x02
-MAX_CHAT_LEN = 21  # badge_app.cpp ChatEntry.text[22] truncates anything longer
+MAX_CHAT_LEN = 16  # wrap at the badge screen's 16-char line width
 
 DATA_FIELD_RE = re.compile(r"data=([0-9a-fA-F ]+)")
 SRC_FIELD_RE = re.compile(r"src=(0x[0-9a-fA-F]+)")
